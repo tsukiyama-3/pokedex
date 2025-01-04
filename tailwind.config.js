@@ -54,6 +54,9 @@ export default {
           TOT: '#7195DC',
         },
       },
+      animation: {
+        spin: 'spin 1s linear infinite',
+      },
     },
   },
   plugins: [require('tw-neumorphism')],

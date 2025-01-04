@@ -2,7 +2,10 @@
 type PokemonListItem = {
   id: number
   name: string
-  image: string
+  image: {
+    default: string
+    shiny: string
+  }
   types: string[]
 }
 

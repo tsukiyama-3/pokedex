@@ -14,6 +14,16 @@ const rawPokemonsSchema = z.object({
   sprites: z.object({
     front_default: z.string(),
     front_shiny: z.string(),
+    versions: z.object({
+      'generation-v': z.object({
+        'black-white': z.object({
+          animated: z.object({
+            front_default: z.string().nullable(),
+            front_shiny: z.string().nullable(),
+          }),
+        }),
+      }),
+    }),
   }),
   stats: z.object({
     stat: z.object({

@@ -1,3 +1,5 @@
+import { useShinyMode } from '~/composables/pokemons/shiny-mode'
+
 // ポケモン一覧で利用するポケモン型
 type PokemonListItem = {
   id: number
@@ -18,6 +20,7 @@ type Query = Partial<{
 const MAX_POKEMON_COUNT = 1025
 
 export const usePokemon = async (name: string) => {
+  const { isShiny } = useShinyMode('shiny')
   // サーバからAPIリクエスト
   const { data } = await useFetch(`/api/v1/pokemons/${name}`, {
     default: () => null,
@@ -29,7 +32,17 @@ export const usePokemon = async (name: string) => {
     },
   })
 
-  return { pokemon: data }
+  const pokemonImage = computed(() => {
+    if (data.value === null) {
+      return ''
+    }
+    if (isShiny.value) {
+      return data.value.image.animated.shiny ?? data.value.image.still.shiny
+    }
+    return data.value.image.animated.default ?? data.value.image.still.default
+  })
+
+  return { pokemon: data, pokemonImage }
 }
 
 export const usePokemons = async (query: Query = { limit: 40 }) => {

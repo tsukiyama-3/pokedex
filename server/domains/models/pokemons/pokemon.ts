@@ -10,8 +10,14 @@ const pokemonSchema = z.object({
   weight: z.string(),
   abilities: z.string().array(),
   image: z.object({
-    default: z.string(),
-    shiny: z.string(),
+    still: z.object({
+      default: z.string(),
+      shiny: z.string(),
+    }),
+    animated: z.object({
+      default: z.string().nullable(),
+      shiny: z.string().nullable(),
+    }),
   }),
   stats: z.object({
     name: z.string(),
@@ -45,8 +51,14 @@ export const convert = (pokemon: PokemonFromPokeApi): Pokemon => {
     weight: convertWeight(pokemon.weight),
     abilities: pokemon.abilities.map(ability => ability.ability.name),
     image: {
-      default: pokemon.sprites.front_default,
-      shiny: pokemon.sprites.front_shiny,
+      still: {
+        default: pokemon.sprites.front_default,
+        shiny: pokemon.sprites.front_shiny,
+      },
+      animated: {
+        default: pokemon.sprites.versions['generation-v']['black-white'].animated.front_default,
+        shiny: pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny,
+      },
     },
     stats: calculateStats(pokemon.stats),
     types: pokemon.types.map(type => type.type.name),

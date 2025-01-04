@@ -1,76 +1,17 @@
-# Nuxt Minimal Starter
+# 🚀 PokeDex - A Nuxt 3 Project
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+https://pokedex.nuxt.dev/
 
-## Setup
+A practical example of creating a Pokémon encyclopedia using Nuxt 3, PokeAPI, and TypeScript. This project demonstrates clean architecture principles and type-safe API integration.
 
-Make sure to install dependencies:
+# ✨ Features
 
-```bash
-# npm
-npm install
+- Pokemon List Page
+  Displays a list of Pokémon with their names, images, and types.
+  ![](https://res.cloudinary.com/dyoyv8djx/image/upload/v1736010904/PokeDex/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-01-05_1.55.32_jlkt58.png)
 
-# pnpm
-pnpm install
+- Pokemon Detail Page
+  Shows detailed information about a selected Pokémon, including its stats, abilities, and more.
+  ![](https://res.cloudinary.com/dyoyv8djx/image/upload/v1736010904/PokeDex/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-01-05_1.55.44_hgso0n.png)
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# pokedex
+# 📘 Zenn Book

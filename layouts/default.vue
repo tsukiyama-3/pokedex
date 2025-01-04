@@ -9,7 +9,9 @@ const { isShiny } = useShinyMode('shiny')
     <header class="py-4 nm-flat-gray-100">
       <div class="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4">
         <h1 class="text-2xl font-bold">
-          PokeDex
+          <NuxtLink to="/">
+            PokeDex
+          </NuxtLink>
         </h1>
         <label
           class="relative flex h-6 w-12 cursor-pointer items-center rounded-full transition-colors duration-300 nm-inset-gray-100"

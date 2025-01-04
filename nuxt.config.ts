@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint'],
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
+  runtimeConfig: {
+    pokeapi: {
+      baseURL: 'https://pokeapi.co/api/v2/',
+    },
+  },
   compatibilityDate: '2024-11-01',
   postcss: {
     plugins: { tailwindcss: {} },

@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       baseURL: 'https://pokeapi.co/api/v2/',
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
   compatibilityDate: '2024-11-01',
   postcss: {
     plugins: { tailwindcss: {} },

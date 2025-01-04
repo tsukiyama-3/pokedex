@@ -50,6 +50,7 @@ if (pokemons.value.length <= 0) {
             width="120"
             height="120"
             class="absolute left-1/2 top-[-64px] -translate-x-1/2 transform transition-transform duration-100 ease-in-out group-hover:scale-125"
+            :style="`view-transition-name: ${pokemon.name}`"
           >
           <div class="space-y-2">
             <p class="text-center text-sm font-bold leading-none opacity-70">N° {{ pokemon.id }}</p>

@@ -25,6 +25,7 @@ if (pokemon.value === null) {
         width="120"
         height="120"
         class="mx-auto"
+        :style="`view-transition-name: ${pokemon.name}`"
       >
       <div class="space-y-2">
         <p class="text-center font-bold leading-none opacity-70">

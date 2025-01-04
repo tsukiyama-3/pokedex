@@ -3,6 +3,9 @@ import { usePokemons } from '~/composables/pokemons'
 import { formatName } from '~/utils/format'
 
 const { pokemons } = await usePokemons()
+if (pokemons.value.length <= 0) {
+  throw createError({ statusCode: 404, message: 'Pokemon Not Found' })
+}
 </script>
 
 <template>

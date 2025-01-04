@@ -9,6 +9,11 @@ const { pokemon, pokemonImage } = await usePokemon(route.params.name as string)
 if (pokemon.value === null) {
   throw createError({ statusCode: 404, message: 'Pokemon Not Found' })
 }
+useSeoMeta({
+  title: `PokeDex | ${formatName(pokemon.value.name)}`,
+  ogTitle: `PokeDex | ${formatName(pokemon.value.name)}`,
+  ogImage: pokemon.value.image.still.default,
+})
 </script>
 
 <template>

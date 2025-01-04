@@ -19,6 +19,7 @@ export default defineCachedEventHandler(
     }
   },
   {
+    // swr: false,
     maxAge: 24 * 60 * 60, // キャッシュのmaxAgeを設定 (1日)
   },
 )

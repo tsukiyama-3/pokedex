@@ -6,7 +6,7 @@ A practical example of creating a Pokémon encyclopedia using Nuxt 3, PokeAPI, a
 
 # 📘 Zenn Book
 
-<img src="https://res.cloudinary.com/dyoyv8djx/image/upload/v1736578179/PokeDex/Frame_50_lblafr.png" alt="Zenn Book" width="400">
+<img src="https://res.cloudinary.com/dyoyv8djx/image/upload/v1736578179/PokeDex/Frame_50_lblafr.png?timestamp=20250111" alt="Zenn Book" width="400">
 
 https://zenn.dev/tsukiyama3/books/pokedex-handson
 
